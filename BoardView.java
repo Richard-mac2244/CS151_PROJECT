@@ -1,6 +1,8 @@
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Window;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,7 +17,7 @@ import javax.swing.event.ChangeListener;
  *BoardView works as both the controller (the listeners) 
  *and the view (JFrame) of the program
  */
-public class BoardView extends JFrame implements ChangeListener{
+public class BoardView extends JFrame implements Observer{
 	JFrame game; 
 	JPanel gameInner;
 	//TODO create a button listener
@@ -48,8 +50,18 @@ public class BoardView extends JFrame implements ChangeListener{
 		
 	}
 	
+	private void updateBoard(int index) {
+		//index is the array index that got changed?
+	}
+	
 	@Override
 	public void stateChanged(ChangeEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
 		
 	}
