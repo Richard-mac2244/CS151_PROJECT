@@ -18,6 +18,7 @@ import javax.swing.event.ChangeListener;
  *and the view (JFrame) of the program
  */
 public class BoardView extends JFrame implements Observer{
+	BoardModel model = new BoardModel(); 
 	JFrame game; 
 	JPanel gameInner;
 	//TODO create a button listener
@@ -44,26 +45,28 @@ public class BoardView extends JFrame implements Observer{
         gameInner.setPreferredSize(new Dimension(400, 300));
 		//TODO Create BLANK buttons in a loop
 
-		for (int i = 0; i < 9; i++) {
-			gameInner.add(new JButton(("1")));
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				gameInner.add(new JButton("1").addActionListener(new ActionListener(){
+					  public void actionPerformed(ActionEvent e)
+					  {
+						  model.set;
+					  }
+					  });
+			}
 		}
 		
 	}
 	
+	/*
 	private void updateBoard(int index) {
 		//index is the array index that got changed?
-	}
+	}*/
 	
-	@Override
-	public void stateChanged(ChangeEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
-		
+		gameInner.repaint();
 	}
 
 	
