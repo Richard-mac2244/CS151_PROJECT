@@ -11,7 +11,7 @@ public class TicTacToeTest {
 		
 		BoardModel model = new BoardModel(); 
 		BoardView view = new BoardView(model); 
-		BoardController board = new BoardController(game); //the parameter passed in will be the strategy that will be used
+		BoardController board = new BoardController(game, model); //the parameter passed in will be the strategy that will be used
 		
 		model.addObserver(view);
 		

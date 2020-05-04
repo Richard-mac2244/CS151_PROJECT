@@ -9,14 +9,14 @@ import java.util.Observable;
  */
 public class BoardModel extends Observable {
 	private int[][] boardValues; 
-	//0 is blank, 1 is X, 2 is O
+	//3 is blank, 1 is X, 0 is O
 	
 	public BoardModel () {
 		boardValues = new int[3][3];
 		
 		for (int i = 0; i<3; i++) {
 			for (int j = 0; j<3; j++) {
-				boardValues[i][j] = 0;
+				boardValues[i][j] = 3;
 			}
 		}	//board has been initialized to 3x3, filled with 0s
 	}
