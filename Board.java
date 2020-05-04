@@ -14,7 +14,8 @@ public interface Board {
 	ImageIcon undoButton = new ImageIcon("undobutton.png"); 
 
 	public JButton makeUndoButton(); 
-	public JButton makeBlankButton(); //draws a blank button
+	public JButton makeButton(int index); //draws a blank button
+	public void changeIcons(JButton[] buttons, BoardModel model);
 	public void drawX(Graphics g); //draws X on board
 	public void drawO(Graphics g); //draws O on board
 }

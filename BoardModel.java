@@ -8,17 +8,16 @@ import java.util.Observable;
  *
  */
 public class BoardModel extends Observable {
-	private int[][] boardValues; 
+	public static int turnNumber = 1;
+	private int[] boardValues; 
 	//3 is blank, 1 is X, 0 is O
 	
 	public BoardModel () {
-		boardValues = new int[3][3];
+		boardValues = new int[9];
 		
-		for (int i = 0; i<3; i++) {
-			for (int j = 0; j<3; j++) {
-				boardValues[i][j] = 3;
-			}
-		}	//board has been initialized to 3x3, filled with 0s
+		for (int i = 0; i < 9; i++) {
+			boardValues[i] = 3;
+		}	//board has been initialized to 9 values, filled with 3s
 	}
 	
 	/**
@@ -28,8 +27,9 @@ public class BoardModel extends Observable {
 	 * @param column the row of the column
 	 * @param value the value to set this position to (should be 0, 1, or 2)
 	 */
-	public void setValue(int row, int column, int value) {
-		boardValues[row][column] = value; 
+	@SuppressWarnings("deprecation")
+	public void setValue(int index, int value) {
+		boardValues[index] = value; 
 		setChanged(); 
 		notifyObservers(); 
 	}
@@ -41,7 +41,7 @@ public class BoardModel extends Observable {
 	 * @param column the column of that position
 	 * @return the value at that location 
 	 */
-	public int getValue(int row, int column) {
-		return boardValues[row][column];
+	public int getValue(int index) {
+		return boardValues[index];
 	}
 }
