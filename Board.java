@@ -1,7 +1,11 @@
+package Tictac;
+
 import java.awt.Graphics;
 
+import javax.swing.JPanel;
+
 public interface Board {
-	public void drawBoard(Graphics g); //draws tic tac toe board
-	public void drawX(Graphics g, int x, int y); //draws X on board
-	public void drawO(Graphics g, int x, int y); //draws O on board
+	//public JPanel drawBoard(); //draws tic tac toe board 
+	public void drawX(Graphics g); //draws X on board
+	public void drawO(Graphics g); //draws O on board
 }
