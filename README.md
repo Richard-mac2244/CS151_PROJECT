@@ -2,5 +2,6 @@
 CS151 Project 1
 Team Members: Richard M., Lauren M., Richard T.
 
-** Current project files are in NewTicTac folder **
+
+** Gradeable version, including reports, are in the "Project" folder **
 ** Old files can be found in archive folder **
